@@ -1,571 +1,180 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-<head>
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Classp : CS109 Class Project Repository. ">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <title>CS109 Hubway Project</title>
+  </head>
 
-    <title>Ale Augur by Alexander, Brian, and Ian</title>
+  <body>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/CS109Hubway/classp">View on GitHub</a>
 
-    <!-- Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="css/animate.css" rel="stylesheet" />
-    <!-- Squad theme CSS -->
-    <link href="css/style.css" rel="stylesheet">
-	<link href="color/default.css" rel="stylesheet">
+          <h1 id="project_title">Predicting Hubway Stations Status</h1>
+          <h3 id="project_tagline">Lauren Alexander, Gabriel Goulet-Langlois, Joshua Wolff</h3>
+		  <a href="http://cs109hubway.github.io/classp#video">Video</a>
+	  &emsp; &emsp; &emsp; &emsp; <a href="http://cs109hubway.github.io/classp#overview">Overview</a>
+	  &emsp; &emsp; &emsp; &emsp; <a href="http://cs109hubway.github.io/classp#analysis">Analysis</a>
+	  &emsp; &emsp; &emsp; &emsp; <a href="http://cs109hubway.github.io/classp#prediction">Prediction</a>
 
-</head>
-<link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
-<style type="text/css">
-    a.fancybox img {
-        border: none;
-        -o-transform: scale(1,1); -ms-transform: scale(1,1); -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;
-    } 
-    a.fancybox:hover img {
-        position: relative; z-index: 999; -o-transform: scale(1.03,1.03); -ms-transform: scale(1.03,1.03); -moz-transform: scale(1.03,1.03); -webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);
-    }
-    
-    .vcenter {
-        	display: table-cell;
-          	vertical-align: middle;
-        	float: none;
-    }
-    
-    .col-centered{
-    float: none;
-    margin: 0 auto;
-    }
-</style>
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-	<!-- Preloader -->
-	<div id="preloader">
-	  <div id="load"></div>
-	</div>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/CS109Hubway/classp/zipball/master">
+			  Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/CS109Hubway/classp/tarball/master">
+			  Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="/">
-                    <h1>ALE AUGUR</h1>
-                </a>
-            </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+	  
+<iframe id="video" width="560" height="315" src="//www.youtube.com/embed/2wK8jpNMjXI" frameborder="0" allowfullscreen></iframe>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#intro">Home</a></li>
-        <li><a href="#about">About</a></li>
-		<li><a href="#background">Background</a></li>
-		<li><a href="#data">Data</a></li>
-		<li><a href="#analysis">Analysis</a></li>
-		<li><a href="#takeaways">Takeaways</a></li>
-		<li><a href="#screencast">Screencast</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Downloads <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="https://github.com/iannightingale/cs109/raw/master/notebooks/Final%20Project.ipynb">iPython Notebook</a></li>
-            <li><a href="https://github.com/iannightingale/cs109/raw/master/csv/csv.zip">CSV Files</a></li>
-            <li><a href="https://github.com/iannightingale/cs109/raw/master/sql/cs109.sql.zip">SQL Database</a></li>
-            <li><a href="https://github.com/iannightingale/cs109">Github</a></li>
-          </ul>
-        </li>
-      </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
 
-	<!-- Section: intro -->
-    <section id="intro" class="intro">
-	
-		<div class="slogan">
-			<h2>ALE AUGUR</h2>
-			<h4>Quantifying and Predicting Beer Preference with the Untappd API</h4>
-		</div>
-		<div class="page-scroll">
-			<a href="#about" class="btn btn-circle">
-				<i class="fa fa-angle-double-down animated"></i>
-			</a>
-		</div>
-    </section>
-	<!-- /Section: intro -->
+<h2><a id="overview" class="anchor" href="#cs109-class-project-overview" aria-hidden="true">
+<span class="octicon octicon-link"></span></a>Project Overview</h2>
 
-	<!-- Section: about -->
-    <section id="about" class="home-section text-center">
-		<div class="heading-about">
-			<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<div class="wow bounceInDown" data-wow-delay="0.4s">
-					<div class="section-heading">
-					<h1>About us</h1>
-					<i class="fa fa-2x fa-angle-down"></i>
+<h3><a id="motivation" class="anchor" href="#cs109-class-project-motivation" aria-hidden="true">
+<span class="octicon octicon-link"></span></a>Motivation</h3>
 
-					</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-		<div class="container">
+<!-- 
+<h3>
+<a id="team-members" class="anchor" href="#team-members" aria-hidden="true"><span class="octicon octicon-link">
+</span></a>Team members:</h3>
+-->
+<p>A major challenge for bicycle sharing programs like Hubway is network imbalance. Some stations are chronically 
+empty at certain times of the day, while others are often full, forcing riders to find another, more inconvenient 
+station at which to drop off the bike. This element of uncertainty detracts from the otherwise seamless user 
+experience. To partially remedy this problem, Hubway uses vans to redistribute
+the bikes across stations each day. However, this strategy is ad hoc and haphazard. It adds to company costs and 
+moreover detracts from the environmental benefits that Hubway offers. This problem calls for a more scientific 
+approach to both the redistribution of bikes across stations and the provision of information to customers. We propose
+a new data science program that informs customers of the likelihood that either a bicycle or an empty bike dock will 
+be available at a given station at some future point in time.</p>
 
-		<div class="row">
-			<div class="col-lg-2 col-lg-offset-5">
-				<hr class="marginbot-50">
-			</div>
-		</div>
-        <div class="row">
-            <div class="col-xs-4 col-sm-4 col-md-4">
-				<div class="wow bounceInUp" data-wow-delay="0.2s">
-                <div class="team boxed-grey">
-                    <div class="inner">
-						<h5>Ian Nightingale</h5>
-                        <p class="subtitle">Python Guru</p>
-                        <div class="avatar"><img src="img/team/1.jpg" alt="" class="img-responsive img-circle" /></div>
-                    </div>
-                </div>
-				</div>
-            </div>
-			<div class="col-xs-4 col-sm-4 col-md-4">
-				<div class="wow bounceInUp" data-wow-delay="0.5s">
-                <div class="team boxed-grey">
-                    <div class="inner">
-						<h5>Alexander Jaffe</h5>
-                        <p class="subtitle">Data Analyst</p>
-                        <div class="avatar"><img src="img/team/2.jpg" alt="" class="img-responsive img-circle" /></div>
+<h3>
+<a id="cs109-class-project-objectives" class="anchor" href="#cs109-class-project-objectives" aria-hidden="true">
+<span class="octicon octicon-link"></span></a>Objectives</h3>
 
-                    </div>
-                </div>
-				</div>
-            </div>
-			<div class="col-xs-4 col-sm-4 col-md-4">
-				<div class="wow bounceInUp" data-wow-delay="0.8s">
-                <div class="team boxed-grey">
-                    <div class="inner">
-						<h5>Brian Mendel</h5>
-                        <p class="subtitle">Data Wrangler</p>
-                        <div class="avatar"><img src="img/team/3.jpg" alt="" class="img-responsive img-circle" /></div>
-                    </div>
-                </div>
-				</div>
-            </div>
-        </div>		
-		</div>
-	</section>
-	<!-- /Section: about -->
-	
+<p>Through this project, we sought to answer four primary questions:</p>
+<ul>
+  <li>How do environmental variables affect the future state of Hubway stations?</li>
+  <li>What do usage patterns look like with respect to specific stations and how that translates to imbalances in the
+  system?</li>
+  <li>Can we integrate these explanatory variables and these usage patterns into a predictive algorithm that would 
+  predict empty and full stations in the near future?</li>
+  <li>What form should that algorithm take?</li>
+</ul>
 
-	<!-- Section: Background and Motivation -->
-    <section id="background" class="home-section text-center bg-gray">
-		
-		<div class="heading-about">
-			<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<div class="wow bounceInDown" data-wow-delay="0.4s">
-					<div class="section-heading">
-					<h1>Background and Motivation</h1>
-					<i class="fa fa-2x fa-angle-down"></i>
+<h3>
+<a id="cs109-class-project-approach" class="anchor" href="#cs109-class-project-objectives" aria-hidden="true">
+<span class="octicon octicon-link"></span></a>Approach</h3>
 
-					</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-		<div class="container">
-		<div class="row">
-			<div class="col-lg-2 col-lg-offset-5">
-				<hr class="marginbot-50">
-			</div>
-		</div>
-        <div class="row text-left">
-            <div class="col-sm-6 col-md-6">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-				    <big>
-                    Craft beer has exploded in popularity in recent years, representing a > $10B market in the US alone (see figure on right). This surge in popularity, along with the rise of social drinking apps like RateBeer, Beer Advocate, and Untappd have generated huge amounts of data that could reveal consumer interest and help to guide the craft beer movement as it solidifies its place among the traditional American beer business. However, to our knowledge, this type of data is not commonly employed by breweries or venues to judge consumer taste. As both beer geeks and data scientists, we wanted to explore these data and find out what makes “good beer” good to the people that drink it. We recognize that beer rating is fairly subjective, dictated both by personal tastes and other external factors. Our study then, is an attempt to quantify these variables, determining which contribute to the overall rating of a beer and which can be used to predict a person’s reception of a certain beer.
-                    </big>
-				</div>
-            </div>
-            <div class="col-sm-6 col-md-6">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-				    <img class="fancybox" width="100%" src="http://www.brewersassociation.org/wp-content/uploads/2009/08/Sales1.jpg"/>
-				     <small><i><a href="http://www.brewersassociation.org/statistics/national-beer-sales-production-data/">http://www.brewersassociation.org/statistics/national-beer-sales-production-data/</a><br/>Note: we do not approve of the choice to use a donut chart.</i></small>
-				</div>
-            </div>
-        </div>		
-		</div>
-	</section>
-	<!-- /Section: Background -->
-	
-    <!-- Section: The data -->
-    <section id="data" class="home-section text-center">
-		
-		<div class="heading-about">
-			<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<div class="wow bounceInDown" data-wow-delay="0.4s">
-					<div class="section-heading">
-					<h1>The Data</h1>
-					<i class="fa fa-2x fa-angle-down"></i>
+<p>We began our study by scraping relevant datasets from the Hubway website as well as websites detailing weather and 
+sports event histories for Boston during 2012. We then performed a series of exploratory analyses with the
+hope of understanding how different variables were associated with one another. These explorations revealed important
+patterns about Hubway ridership on weekdays vs. weekends, in good weather vs. bad weather, and before and after 
+baseball games. We also incorporated mapping and clustering operations into our exploratory phase: we used simple 
+techniques to identify how location affects station ridership and more complicated techniques such as singular value 
+decomposition to group stations according to temporal use patterns and map them geographically. The information 
+collected during the exploration phase informed the creation of three predictive algorithms: one using random forest
+classification, another using Bayesian inference, and third using multiple regression.</p>
 
-					</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-		<div class="container">
-		<div class="row">
-			<div class="col-lg-2 col-lg-offset-5">
-				<hr class="marginbot-50">
-			</div>
-		</div>
-		 <div class="row text-center">
-                <div class="col-sm-6 col-md-6">
-    				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-    				     <h2>6,377 users</h2>
-    				</div>
-                </div>
-                 <div class="col-sm-6 col-md-6">
-      				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-      				     <h2>606,083 ratings</h2>
-      				</div>
-                  </div>
-            </div>
-        <div class="row text-center">
-            <div class="col-sm-6 col-md-6 vcenter">
-				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-				    <img class = "fancybox" width="100%" src="/img/data/users.png" />
-				</div>
-            </div>
-             <div class="col-sm-6 col-md-6 vcenter">
-  				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-  				    <img class = "fancybox" width="100%" src="/img/data/ratings.png" />
-  				</div>
-              </div>
-        </div>
-        <div class="row">
-			<div class="col-lg-2 col-lg-offset-5">
-				<hr class="marginbot-50">
-			</div>
-		</div>
-		<div class="row">
-		    <div class="col-sm-5 col-md-6">
-      				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-      				     <h2>88,028 unique beers</h2>
-      				</div>
-                  </div>
-              <div class="col-sm-6 col-md-6">
-  				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-  				     <h2>8,035 breweries</h2>
-  				</div>
-              </div>
-		</div>
-		
-        <div class="row text-center">
-              <div class="col-sm-6 col-md-6 vcenter">
-      				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-      				    <img class = "fancybox" width="100%" src="/img/data/beers.png" />
-      				</div>
-                  </div>
-              <div class="col-sm-6 col-md-6 vcenter">
-  				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-  				    <img class = "fancybox" width="100%" src="/img/data/breweries.png" />
-  				</div>
-              </div>
-          </div>	
-		</div>
-	</section>
-	<!-- /Section: data-->
-	
-    <!-- Section: The analysis -->
-     <section id="analysis" class="home-section text-center bg-gray">
+<h2><a id="analysis" class="anchor" href="#cs109-class-project-analysis" aria-hidden="true">
+<span class="octicon octicon-link"></span></a>Analysis</h2>
 
- 		<div class="heading-about">
- 			<div class="container">
- 			<div class="row">
- 				<div class="col-lg-8 col-lg-offset-2">
- 					<div class="wow bounceInDown" data-wow-delay="0.4s">
- 					<div class="section-heading">
- 					<h1>Analysis</h1>
- 					<i class="fa fa-2x fa-angle-down"></i>
+<p>The Hubway system serves casual users as well as riders who pay a membership fee to utilize the bicycles more 
+regularly. The company collects demographics data on its members. During 2012, about two thirds of Hubway riders were 
+members, and of those about three fourths were males. </p>
+<img src="images/gender.png" alt="gender">
 
- 					</div>
- 					</div>
- 				</div>
- 			</div>
- 			</div>
- 		</div>
- 		<div class="container">
- 		<div class="row">
- 			<div class="col-lg-2 col-lg-offset-5">
- 				<hr class="marginbot-50">
- 			</div>
- 		</div>
- 		<div class="row">
- 			 <div class="col-sm-12 col-md-12">
-            				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                             <h2>Style and Attributes</h2>
-            				</div>
-                    </div>
- 		</div>
- 		
-         <div class="row text-center">
-                       <div class="col-sm-4 col-md-4 vcenter">
-                    				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                    				     <img class = "fancybox" width="100%" src="/img/analysis/clustering.png" />
-                    				</div>
-                            </div>
-               <div class="col-sm-4 col-md-4 vcenter">
-       				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                       <img class = "fancybox" width="100%" src="/img/analysis/regression.png" />
-       				</div>
-                </div>
-                    <div class="col-sm-4 col-md-4 vcenter">
-               				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                               <img class = "fancybox" width="100%" src="/img/analysis/rating_by_style.png" />
-               				</div>
-                        </div>
-           </div>	
-           <div class = "row text-left">
-               <div class="col-sm-12 col-md-12">
-                   <div class="wow fadeInLeft" data-wow-delay="0.2s">
-                       <br/><br/>
-                In our exploratory analysis, we sought to discover relationships among variables and any correlations that they might have with beer rating. We saw that different styles of beer cluster by their alcohol by volume and bitterness, which we expect given that these metrics relate to the ingredients and flavor profile of a given beer. Looking more closely, linear regressions revealed that some of these variables correlated with user rating, which implied that current tastes skew towards more alcoholic and hoppier beers. Given this, we weren’t surprised to see that we that russian imperial stouts, wild ales, ipas and double ipas are consistently higher rated. We also found that the locality of a beer was not correlated with its rating - there is good beer everywhere!
-                </div>
-                </div>
-           </div>
-           
-           <div class="row">
-    			<div class="col-lg-2 col-lg-offset-5">
-    				<hr class="marginbot-50">
-    			</div>
-    		</div>
-         		<div class="row">
-         			 <div class="col-sm-12 col-md-12">
-                    				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                                     <h2>Beer Descriptions</h2>
-                    				</div>
-                            </div>
-         		</div>
-            <div class="row text-center">
-                         
-                  <div class="col-lg-10 col-lg-offset-1">
-          				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                           <a id="wordMap" class="iframe" href="/cloud.html"><img class="fancybox" width="50%" src="img/analysis/wordMap.png"></a><br/><br/>
-                                         We also wanted to explore textual features of our dataset, in particular those contained in the corpus of beer descriptions. We tokenized these descriptions and created a word cloud to visualize the most frequently used terms.
-                                            <i>Click to enter interactive mode and explore!</i>
-          				</div>
-                   </div>
-              </div>
-               <div class="row">
-          			<div class="col-lg-2 col-lg-offset-5">
-          				<hr class="marginbot-50">
-          			</div>
-          		</div>
-               		<div class="row">
-               			 <div class="col-sm-12 col-md-12">
-                          				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                                           <h2>Machine Learning</h2>
-                          				</div>
-                        </div>
-               		</div>
-               	     <div class="row text-center">
-                           <div class="col-sm-6 col-md-6 vcenter">
-                   				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                                   <img class = "fancybox" width="100%" src="/img/analysis/word_importances_small.png" data-big="/img/analysis/word_importances.png"/>
-                   				</div>
-                            </div>
-                                <div class="col-sm-6 col-md-6 vcenter">
-                           				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                                          <img class = "fancybox" width="100%" src="/img/analysis/importances.png" />
-                           				</div>
-                                    </div>
-                       </div>
-                       <div class="row text-left">
-                                     <div class="col-sm-12 col-md-12 vcenter">
-                                   				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                                   				    <br/><br/>
-                                                    We then wondered - could we use these textual and numerical features to predict user rating of a beer? We implemented two random forest classifiers, first using words from our natural language processing analysis and secondly with the beer attributes. For the word analysis, important features began with common words like malt and hops, whereas for beer attributes, the global rating of the beer was the best predictor. Our classifiers were not highly accurate, but performance improved once we binarized our data into good and bad beer. Using the results of our analysis, we built a recommendation tool that tells a user whether or not they will like a given beer.
-                                   				</div>
-                                           </div>
-                       </div>
- 		</div>
- 	</section>
- 	<!-- /Section: analysis-->
+<p>Hubway is intended for short rides, and overtime fees apply to trips longer than thirty minutes. Our analysis of 
+Hubway’s trip data shows that over 90 percent of trips have a duration of less than 30 minutes. </p>
+<img src="images/tripduration.png" alt="duration">
+
+<p>Hubway serves both commuters and casual riders. By mapping trip routes for weekdays and weekends, we see that 
+certain routes are heavily used on weekdays for commuting. On weekends, when casual riders and tourists constitute 
+Hubway’s main user base, trips are more distributed across the system. </p>
+<img src="images/tripODs.png" alt="tripODs">
+
+<p>Hubway users almost always ride in a single direction, picking up and dropping off their bikes at different 
+stations. A user might retrieve a bike at Central Square and return it at Harvard Square. This behavior leads to 
+imbalances in the system: popular origin stations run out of bikes and popular destination stations fill up with 
+bikes, running out of return docks. The resulting disparities cause shortages for riders and represent the motivation 
+for our study. The bar charts and maps below identify the stations most often empty or full during the weekday morning
+ and evening rush hours. </p>
+<img src="images/ArrivalsDepartures.png" alt="arrdept">
+<img src="images/AMFull.png" alt="amfull">
+<img src="images/AMEmpty.png" alt="amempty">
+<img src="images/PMFull.png" alt="pmfull">
+<img src="images/PMEmpty.png" alt="pmempty">
+
+<p>We used a combingation of singular value decomposition and k-means to identify groups of stations with similar 
+usage patterns. For each station, we compute the average value of fullness for every 5-minute interval on weekdays 
+and use this result as a feature vector for the clustering process. A fullness of 1 during a given interval indicates 
+that a station tends to be totally full during that interval on an average weekday. In the heatmap below, each line 
+represents the fullness profile of a single station over the course of a weekday and stations are grouped according to
+ cluster membership. The heat map and geographic map below illustrate the results of our clustering effort and clearly
+ differentiate between stations primarily serving commuters (clusters 1 and 2) and stations used for mutiple purposes 
+ (clusters 3 and 4). Stations in cluster 1 tend to be located in residential areas, explaining why they are mostly 
+ full in the morning and evening and empty during the working day. In contrast, stations in cluster 2 tend to be full 
+ mosty during midday and empty in the morning and evening. Stations in clusters 3 and 4 tend to line in the periphery 
+ of zones covered by clusters 1 and 2. </p>
+<img src="images/Clustering.png" alt="cluster">
+
+<p>It’s no fun riding a bike in the rain. These plots show how rain puts a damper in Hubway ridership. The effect is 
+more pronounced on weekends, when Hubway users tend to be casual riders who can simply save the trip for another day 
+or take a taxi.</p>
+<img src="images/Rain.png" alt="rain">
+
+<p>Riding a bike in warm weather is great. Unless it’s too warm. This plot, along with the accompanying LOESS 
+regression (green line) depicts ridership as a function of temperature. Ridership peaks when temperatures hit the low 
+70s (fahrenheit) but then drops when temperatures become uncomfortably hot. </p>
+<img src="images/Temp.png" alt="temp">
+
+<p>This plot shows how the number of Hubway trips leaving the stations near Fenway spikes on nights with Red Sox 
+games. Go Sox!</p>
+<img src="images/Baseball.png" alt="baseball">
+
+
+<h2><a id="prediction" class="anchor" href="#cs109-class-project-prediction" aria-hidden="true">
+<span class="octicon octicon-link"></span></a>Prediction</h2>
+
+<p>Right now, Hubway users can’t really predict whether a station will be empty or full in thirty minutes. The best 
+they can do is check to see whether a station is currently empty or full and then assume that it will look the same in
+ the near future. We set out to change that by constructing truly predictive models. To assess the accuracy of our 
+ models, we had to first construct a “baseline” to compare our results against. The first chart below shows the 
+ prediction accuracy of the baseline model. This model simulates the best possible results possible using real time 
+ data. </p>
+ <img src="images/Baseline.png" alt="baseline">
+ 
+ <p>Our predictive models take weather and events into account and use more advanced data science techniques such 
+ as bayesian inference, random forest classification, and regression analysis. The plots below shows the 
+ results of our predictive models compared against the baseline model. Accuracy here is gauged in terms of “recall,” 
+ which asks, “Of all the stations that ended up being empty or full, how many did the model identify correctly?"</p>
+ <img src="images/EmptyRecall.png" alt="empty">
+ <img src="images/FullRecall.png" alt="full">
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Repository maintained by <a href="https://github.com/CS109Hubway">CS109Hubway</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
     
 
-	<!-- Section: contact -->
-    <section id="takeaways" class="home-section text-center">
-		<div class="heading-contact">
-			<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<div class="wow bounceInDown" data-wow-delay="0.4s">
-					<div class="section-heading">
-					<h1>Takeaways</h1>
-					<i class="fa fa-2x fa-angle-down"></i>
-
-					</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-		<div class="container">
-		 <div class="row text-center">
-                       <div class="col-sm-6 col-md-6">
-                    				<div class="wow fadeInLeft text-left" data-wow-delay="0.2s">
-                                     <big>
-                                       Given the relatively low accuracy score of our classifiers, the predictive value of our variables remains somewhat unclear - although our analysis was able to identify important trends in user preference, more information may be needed to implement a more accurate algorithm. Future work could look to include other important attributes like price, aroma, taste, and color that could all contribute to a user's perception of quality. A beer's perceived quality may to some degree be a product of psychology, difficult to detect/predict given the variables we worked with here. Ultimately, we were able to build a large database of beers and perform preliminary analyses that explored its major features and predictive possibilities. This large dataset also allowed us to visualize global trends in a novel way, providing some insight into the existing field of craft beer and the preferences of those who drink it.
-                                         
-                                     </big>
-                    				</div>
-                            </div>
-               <div class="col-sm-6 col-md-6 text-left">
-       				<div class="wow fadeInLeft" data-wow-delay="0.2s">
-                       <img width="100%" src="/img/takeaways/beer_toast.jpg"/>
-                       <small><i><a href="http://lygsbtd.files.wordpress.com/2011/08/beer_toast.jpg">http://lygsbtd.files.wordpress.com/2011/08/beer_toast.jpg</a></small></i>
-       				</div>
-                </div>
-        </div>
-		
-		</div>
-    </div>	
-
-		</div>
-	</section>
-	<!-- /Section: takeaways -->
-	
-	<!-- Section: screencast -->
-    <section id="screencast" class="home-section text-center bg-gray">
-		<div class="heading-contact">
-			<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<div class="wow bounceInDown" data-wow-delay="0.4s">
-					<div class="section-heading">
-					<h1>Screencast</h1>
-					<i class="fa fa-2x fa-angle-down"></i>
-
-					</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-		<div class="container">
-		 <div class="row text-center">
-                       <div class="col-sm-12 col-md-12">
-                    				<div class="wow fadeInLeft text-center" data-wow-delay="0.2s">
-                                            <iframe width="840" height="472.5" src="//www.youtube.com/embed/J6Svwwetaj8" frameborder="0" allowfullscreen></iframe>
-                    				</div>
-                        </div>
-        </div>
-		
-		</div>
-    </div>	
-
-		</div>
-	</section>
-	
-	<!-- screencast -->
-
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-lg-12">
-					<div class="wow shake" data-wow-delay="0.4s">
-					<div class="page-scroll marginbot-30">
-						<a href="#intro" id="totop" class="btn btn-circle">
-							<i class="fa fa-angle-double-up animated"></i>
-						</a>
-					</div>
-					</div>
-					<p>&copy;Copyright 2014 - <a href="http://iandnightingale.com">iandnightingale.com</a>. All rights reserved. Template available <a href="http://bootstraptaste.com/squadfree-free-bootstrap-template-creative/">here</a>. Background image courtesy of <a href="http://www.twistedtapusa.com/">twistedtapusa</a>.</p>
-				</div>
-			</div>	
-		</div>
-	</footer>
-
-    <!-- Core JavaScript Files -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>	
-	<script src="js/jquery.scrollTo.js"></script>
-	<script src="js/wow.min.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="js/custom.js"></script>
-
-    <!-- lightbox -->
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
-    <script type="text/javascript">
-        $(function($){
-            var addToAll = false;
-            var gallery = false;
-            var titlePosition = 'inside';
-            $(addToAll ? 'img' : 'img.fancybox').each(function(){
-                var $this = $(this);
-                var title = $this.attr('title');
-                var src = $this.attr('data-big') || $this.attr('src');
-                var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
-                $this.wrap(a);
-            });
-            $('a.fancybox').fancybox({
-                titlePosition: titlePosition,
-                scrolling:"no",
-                centerOnScroll:false,
-                'transitionIn'      : 'fade',
-                 'transitionOut'     : 'fade'
-            });
-            
-            $('#wordMap').fancybox({
-                 centerOnScroll:false,
-                scrolling:"no",
-                'width':525,
-                'height':525,
-                'title':"Zoom in or out on the map by clicking on the + or -, or double clicking, or scrolling. Click and drag to explore the less frequently used words.",
-                'autoSize' : false
-            })
-        });
-        
-        $.fancybox.center = function(duration){
-            // noop;
-        }
-        
-        $.noConflict();
-    </script>
-</body>
-
+  </body>
 </html>
